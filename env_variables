@@ -1,0 +1,23 @@
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export working_dir=$GOPATH/src/k8s.io
+export PATH=$PATH:/usr/local/go/bin:$GOROOT/bin:/home/ubuntu/go/bin:$working_dir/kubernetes/cluster:$working_dir/kubernetes/
+export user=ramineni
+export KUBE_FASTBUILD=true
+export EXTERNAL_CLOUD_PROVIDER_BINARY=$GOPATH/src/k8s.io/cloud-provider-openstack/openstack-cloud-controller-manager
+export EXTERNAL_CLOUD_PROVIDER=true
+export CLOUD_PROVIDER=openstack
+export CLOUD_CONFIG=/etc/kubernetes/cloud-config
+export FEATURE_GATES="CSIPersistentVolume=true,MountPropagation=true"
+export RUNTIME_CONFIG="storage.k8s.io/v1alpha1=true"
+export LOG_LEVEL=5
+export ALLOW_PRIVILEGED=true
+export ALLOW_SECURITY_CONTEXT=true
+export ENABLE_CRI=false
+export ENABLE_HOSTPATH_PROVISIONER=true
+export ENABLE_SINGLE_CA_SIGNER=true
+export API_HOST_IP=$(ip route get 1.1.1.1 | awk '{print $7}')
+export KUBELET_HOST="0.0.0.0"
+export ENABLE_SINGLE_CA_SIGNER=true
+export KUBE_ENABLE_CLUSTER_DNS=false
+export HOSTNAME_OVERRIDE=$(hostname)
