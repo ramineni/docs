@@ -4,6 +4,12 @@ Setting up new node
 sudo apt update & sudo apt upgrade
 sudo apt install git python-pip
 
+using proxy , 
+git config --global http.proxy http://proxyUsername:proxyPassword@proxy.server.com:port
+git config --global http.https://domain.com.sslVerify false
+
+apt proxy , /etc/apt/apt.conf
+Acquire::http::Proxy http://proxyUsername:proxyPassword@proxy.server.com:port
 git clone https://github.com/openstack-dev/devstack
 
 For cinder to use ceph backend
